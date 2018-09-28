@@ -1,4 +1,4 @@
-# Vagrant Cheat Sheet
+$# Vagrant Cheat Sheet
 
 ```sh
 vagrant -v
@@ -26,7 +26,7 @@ vagrant destroy
 -  **User**: vagrant
 - **Password**: vagrant
 
-### Download Vagrant boxes manually
+#### Download Vagrant boxes manually
 
 Template URL:
 https://app.vagrantup.com/<organization name>/boxes/<box name>/versions/<version>/providers/<provider>.box
