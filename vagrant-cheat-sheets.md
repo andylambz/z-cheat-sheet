@@ -1,4 +1,4 @@
-$# Vagrant Cheat Sheet
+# Vagrant Cheat Sheet
 
 ```sh
 vagrant -v
@@ -28,11 +28,9 @@ vagrant destroy
 
 #### Download Vagrant boxes manually
 
-Template URL:
+- Template URL:
 https://app.vagrantup.com/<organization name>/boxes/<box name>/versions/<version>/providers/<provider>.box
-
-Sample URL:
+- Sample URL:
 https://app.vagrantup.com/centos/boxes/7
-
-Direct URL;
+- Direct URL;
 https://app.vagrantup.com/centos/boxes/7/versions/1804.02/providers/virtualbox.box
