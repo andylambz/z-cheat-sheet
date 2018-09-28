@@ -24,8 +24,10 @@ vagrant destroy
 ---
 #### Default User Settings
 
-**User**: vagrant
-**Password**: vagrant
+|  |  |
+| :------------ | :------------ |
+| **User** | vagrant |
+| **Password** | vagrant |
 
 ---
 ### Download Vagrant boxes manually
