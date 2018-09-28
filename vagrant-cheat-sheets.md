@@ -29,7 +29,7 @@ vagrant destroy
 #### Download Vagrant boxes manually
 ```
 # Template URL:
-# https://app.vagrantup.com/<organization name>/boxes/<box name>/versions/<version>/providers/<provider>.box
+https://app.vagrantup.com/<organization name>/boxes/<box name>/versions/<version>/providers/<provider>.box
 # Sample URL:
 https://app.vagrantup.com/centos/boxes/7
 # Direct URL;
