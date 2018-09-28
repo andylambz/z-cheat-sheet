@@ -24,8 +24,7 @@ vagrant destroy
 ---
 #### Default User Settings
 
- **User**: vagrant
-
+**User**: vagrant
 **Password**: vagrant
 
 ---
