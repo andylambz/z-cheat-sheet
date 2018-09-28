@@ -1,4 +1,4 @@
-# Vargant Cheat Sheet
+# Vagrant Cheat Sheet
 
 ```sh
 vagrant -v
@@ -21,18 +21,24 @@ vagrant package --output mynew.box
 vagrant destroy
 ```
 
-[========]
-
+---
 #### Default User Settings
-> **User**: vagrant
+
+ **User**: vagrant
+
 **Password**: vagrant
 
-[========]
-
+---
 ### Download Vagrant boxes manually
+
 Template URL:
+
 https://app.vagrantup.com/<organization name>/boxes/<box name>/versions/<version>/providers/<provider>.box
+
 Sample URL:
+
 https://app.vagrantup.com/centos/boxes/7
+
 Direct URL;
+
 https://app.vagrantup.com/centos/boxes/7/versions/1804.02/providers/virtualbox.box
