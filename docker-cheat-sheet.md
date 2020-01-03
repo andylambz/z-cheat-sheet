@@ -57,3 +57,22 @@ docker tag myimage:1.0 myrepo/myimage:2.0
 // Push an image to a registry
 docker push myrepo/myimage:2.0
 ```
+
+#### Clean up
+```sh
+// Clean all
+docker system prune
+docker system prune -a
+
+// Stop all running containers
+docker stop $(docker ps -a -q)
+
+// Delete stopped containers
+docker container prune
+
+// Images
+docker image prune [-a]
+
+// Volumes
+docker volume prune
+```
