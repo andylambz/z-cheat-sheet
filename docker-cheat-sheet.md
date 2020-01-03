@@ -8,6 +8,11 @@ $ docker run centos
 $ docker run -i -t centos
 [root@4f0b435cdbd7 /]# exit
 ```
+#### Show
+```sh
+// Show both running and stopped containers
+docker ps -a
+```
 
 #### Build
 ```sh
