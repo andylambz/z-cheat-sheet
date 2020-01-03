@@ -1,5 +1,14 @@
 # Docker cheat sheet
 
+#### Example
+```sh
+// Centos
+$ docker pull centos
+$ docker run centos
+$ docker run -i -t centos
+[root@4f0b435cdbd7 /]# exit
+```
+
 #### Build
 ```sh
 // Build an image from the Dockerfile in the current directory and tag the image 
