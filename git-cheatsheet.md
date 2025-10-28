@@ -101,3 +101,60 @@ git commit --m "message"
 ```Bash
 git push
 ```
+
+***
+
+## GIT CLONE
+
+#### Clone a repository (HTTPS)
+```bash
+git clone https://github.com/username/repo-name.git
+```
+
+#### Clone a repository (SSH)
+```bash
+git clone git@github.com:username/repo-name.git
+```
+
+#### Clone into a specific folder
+```bash
+git clone https://github.com/username/repo-name.git my-folder
+```
+
+#### Clone only a specific branch
+```bash
+git clone -b branch-name https://github.com/username/repo-name.git
+```
+
+#### Clone with shallow history (latest commit only)
+```bash
+git clone --depth 1 https://github.com/username/repo-name.git
+```
+- Clones the repo with minimal history (faster & smaller)
+
+#### Clone a subdirectory (sparse checkout)
+```bash
+git clone --filter=blob:none --no-checkout https://github.com/username/repo-name.git
+cd repo-name
+git sparse-checkout init --cone
+git sparse-checkout set path/to/subdirectory
+```
+- Clones only a specific folder from the repository (Git 2.25+)
+
+#### Clone a bare repository
+```bash
+git clone --bare https://github.com/username/repo-name.git
+```
+- Clones without working directory — used for mirrors or server-side
+
+#### Clone a mirror of the repository
+```bash
+git clone --mirror https://github.com/username/repo-name.git
+```
+- Clones all refs and branches — ideal for backups
+
+#### Clone with submodules
+```bash
+git clone --recurse-submodules https://github.com/username/repo-name.git
+```
+- Clones the repo and its submodules
