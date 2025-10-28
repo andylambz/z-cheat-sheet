@@ -158,3 +158,63 @@ git clone --mirror https://github.com/username/repo-name.git
 git clone --recurse-submodules https://github.com/username/repo-name.git
 ```
 - Clones the repo and its submodules
+
+***
+
+## GIT USER MANAGEMENT
+
+#### Set global username
+```bash
+git config --global user.name "Your Name"
+```
+- Sets your name for all repositories on your system
+
+#### Set global email
+```bash
+git config --global user.email "you@example.com"
+```
+- Sets your email for all repositories on your system
+
+#### Set username for current repository only
+```bash
+git config user.name "Your Name"
+```
+- Overrides global username for this specific repo
+
+#### Set email for current repository only
+```bash
+git config user.email "you@example.com"
+```
+- Overrides global email for this specific repo
+
+#### View global user settings
+```bash
+git config --global user.name
+git config --global user.email
+```
+- Displays your global Git username and email
+
+#### View all Git config settings
+```bash
+git config --list
+```
+- Lists all Git configuration settings (global and local)
+
+#### Edit global Git config file manually
+```bash
+git config --global --edit
+```
+- Opens the global config file in your default editor
+
+#### Remove global username/email
+```bash
+git config --global --unset user.name
+git config --global --unset user.email
+```
+- Deletes global user settings
+
+#### Check which user made a commit
+```bash
+git log --pretty=format:"%h - %an <%ae>"
+```
+- Shows commit history with author name and email
