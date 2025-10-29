@@ -147,3 +147,44 @@
 > This module is experimental. Avoid using it in production until it's marked stable.
 
 ---
+
+## 🗂️ Chủ đề / Danh mục / Phân loại
+
+| Emoji | Ý nghĩa sử dụng |
+|-------|------------------|
+| 🗂️     | Danh mục / thư mục nội dung |
+| 📁     | Thư mục / nhóm tài liệu |
+| 📂     | Mở thư mục / mục đang xem |
+| 🧭     | Điều hướng / chủ đề chính |
+| 🧱     | Khối nội dung / module |
+| 🧩     | Thành phần / phần mở rộng |
+| 🗃️     | Hộp lưu trữ / phân loại |
+| 🗄️     | Tủ tài liệu / nhóm dữ liệu |
+| 🗒️     | Ghi chú / danh sách chủ đề |
+| 🧾     | Biên bản / mục lục nội dung |
+
+---
+
+## 📚 Tài liệu / Hướng dẫn / Kiến thức
+
+| Emoji | Ý nghĩa sử dụng |
+|-------|------------------|
+| 📚     | Tài liệu / học liệu |
+| 📘     | Hướng dẫn / sách tham khảo |
+| 📖     | Nội dung chính / đọc thêm |
+| 🧠     | Kiến thức / mẹo hay |
+| 📝     | Ghi chú / chỉnh sửa |
+| 📎     | Đính kèm / liên quan |
+
+---
+
+## 🧭 Điều hướng / Liên kết chủ đề
+
+| Emoji | Ý nghĩa sử dụng |
+|-------|------------------|
+| 🔗     | Liên kết / tham chiếu |
+| 🔙     | Quay lại danh mục |
+| 🔜     | Tiếp theo / chuyển chủ đề |
+| ⬅️ ➡️ ⬆️ ⬇️ | Mũi tên điều hướng giữa các phần |
+
+---
