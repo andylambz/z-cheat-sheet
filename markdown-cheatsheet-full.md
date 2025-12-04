@@ -49,9 +49,14 @@
 ## 🔗 Links & Images
 
 ```markdown
+[Tên liên kết](#id-tieu-de)
 [Link text](https://example.com)
 ![Alt text](https://example.com/image.jpg)
 <https://example.com>         # Auto-link
+
+<a name="ghi-chu-quan-trong"></a>
+Đây là đoạn văn bản quan trọng.
+Xem lại [ghi chú quan trọng](#ghi-chu-quan-trong).
 ```
 
 ---
