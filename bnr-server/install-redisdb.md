@@ -21,10 +21,18 @@ docker run --name bnr-redis \
   -v /opt/redis/data \
   -d redis redis-server --appendonly yes --requirepass “123456”
 
-
-
 -v /my/local/path:/data: Gắn một thư mục trên máy thật vào container để lưu trữ dữ liệu persistence.
 
 --appendonly yes: Bật chế độ lưu dữ liệu liên tục (AOF).
 
 --requirepass: Thiết lập mật khẩu truy cập.
+
+***
+
+## Check
+docker exec -it my-redis redis-cli ping
+
+## View log
+docker logs -f my-redis
+
+
