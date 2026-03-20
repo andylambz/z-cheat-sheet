@@ -117,3 +117,49 @@ db.users.deleteMany({ status: "inactive" })
 db.users.deleteMany({})
 ```
 
+## Tạo user dùng để login vào mongodb
+
+### Tạo user admin
+
+```bash
+// Bước 1: Chuyển sang database admin
+use admin
+
+// Bước 2: Chạy lệnh tạo user
+db.createUser({
+  user: "admin",
+  pwd: "HauMatKhauSieuKho123!", // Thay bằng mật khẩu của bạn
+  roles: [
+    { role: "root", db: "admin" }
+  ]
+})
+```
+
+### Tạo User cho Ứng dụng (Chỉ Đọc/Ghi 1 Database)
+
+```bash
+// Bước 1: Chuyển sang database của ứng dụng
+use my_app_db
+
+// Bước 2: Chạy lệnh tạo user
+db.createUser({
+  user: "app_user",
+  pwd: "MatKhauChoApp456",
+  roles: [
+    { role: "readWrite", db: "my_app_db" }
+  ]
+})
+```
+
+(Quyền readWrite cho phép user này thêm, sửa, xóa, tìm kiếm dữ liệu nhưng CHỈ giới hạn gọn trong database my_app_db mà thôi).
+
+### Kiểm tra xem tiến trình mongo đang chạy tham số nào
+
+```bash
+docker exec -it mongodb-shared ps -ef | grep mongo
+```
+
+Nếu dòng in ra có chứa chữ --auth, tức là chế độ xác thực đang được bật.
+
+Nếu chỉ thấy /usr/bin/mongod --bind_ip_all mà không thấy --auth đâu, nghĩa là server đang mở cửa tự do.
+
