@@ -70,3 +70,50 @@ docker exec -it mongodb-shared mongo my_db
 exit
 ```
 
+## Mongodb danh sách câu lệnh cơ bản
+
+### Database
+
+```bash
+show dbs
+use my_database
+db
+db.dropDatabase()
+```
+
+### Collection
+
+```bash
+show collections
+db.createCollection("users")
+db.users.drop()
+```
+
+### Document
+
+```bash
+db.users.insertOne({ name: "Nguyễn Văn A", age: 25, email: "a@gmail.com" })
+db.users.insertMany([
+    { name: "Trần Thị B", age: 22 },
+    { name: "Lê Văn C", age: 30 }
+])
+
+db.users.find()
+db.users.find().pretty()
+db.users.find({ age: 25 })
+db.users.findOne({ name: "Nguyễn Văn A" })
+
+db.users.updateOne(
+    { name: "Nguyễn Văn A" }, 
+    { $set: { age: 26 } }
+)
+db.users.updateMany(
+    { age: 22 }, 
+    { $set: { status: "active" } }
+)
+
+db.users.deleteOne({ name: "Nguyễn Văn A" })
+db.users.deleteMany({ status: "inactive" })
+db.users.deleteMany({})
+```
+
