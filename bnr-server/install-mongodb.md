@@ -4,7 +4,7 @@
 
 ```bash
 docker run -d \
-  --name mongodb-shared \
+  --name bnr-mongodb \
   --restart always \
   -p 27018:27017 \
   -v /opt/mongo-data:/data/db \
