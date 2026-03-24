@@ -184,4 +184,4 @@ Run với docker
 Nếu Redis của bạn chạy trong Docker, hãy dùng lệnh sau để thực thi từ bên ngoài:
 
 Bash
-docker exec -it <tên_container> sh -c "redis-cli --scan --pattern 'auth:token*' |
+sudo docker exec -it bnr-redis sh -c "redis-cli --scan --pattern 'auth:token*'"
