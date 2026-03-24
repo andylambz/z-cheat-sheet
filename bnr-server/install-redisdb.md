@@ -122,3 +122,34 @@ Nếu bạn đang dùng Docker, hãy vào giao diện gõ lệnh bằng cách:
 INFO server	Xem phiên bản, ID tiến trình (PID), và thời gian uptime của server.
 INFO clients	Xem có bao nhiêu ứng dụng đang kết nối vào Redis.
 INFO memory	Xem Redis đang chiếm bao nhiêu RAM của hệ thống.
+
+***
+
+Cú pháp:
+
+Bash
+KEYS <pattern>
+Các ví dụ phổ biến:
+
+KEYS *: Lấy tất cả các key đang có trong DB.
+
+KEYS user:*: Lấy tất cả các key bắt đầu bằng "user:".
+
+KEYS *session*: Lấy các key có chứa chữ "session".
+
+KEYS user:??: Lấy các key bắt đầu bằng "user:" và theo sau đúng 2 ký tự (dùng dấu ?).
+
+***
+
+Cú pháp:
+
+Bash
+SCAN <cursor> MATCH <pattern> COUNT <number>
+Cách thực hiện trong redis-cli:
+
+Bắt đầu với cursor là 0:
+SCAN 0 MATCH user:* COUNT 100
+
+Redis sẽ trả về một số cursor mới và một danh sách các key.
+
+Bạn dùng số cursor mới đó để tiếp tục quét cho đến khi Redis trả về cursor số 0 (nghĩa là đã quét hết).
