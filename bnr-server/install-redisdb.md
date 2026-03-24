@@ -175,3 +175,13 @@ Nếu số lượng key của bạn ít (vài nghìn key), bạn có thể dùng
 
 Bash
 redis-cli del $(redis-cli keys "auth:token*")
+
+***
+
+Run với docker
+
+3. Nếu bạn đang dùng Docker
+Nếu Redis của bạn chạy trong Docker, hãy dùng lệnh sau để thực thi từ bên ngoài:
+
+Bash
+docker exec -it <tên_container> sh -c "redis-cli --scan --pattern 'auth:token*' |
