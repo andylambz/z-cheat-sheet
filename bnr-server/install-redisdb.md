@@ -153,3 +153,25 @@ SCAN 0 MATCH user:* COUNT 100
 Redis sẽ trả về một số cursor mới và một danh sách các key.
 
 Bạn dùng số cursor mới đó để tiếp tục quét cho đến khi Redis trả về cursor số 0 (nghĩa là đã quét hết).
+
+***
+
+Xoá key theo pattern (an toàn)
+
+Bash
+redis-cli --scan --pattern "auth:token*" | xargs -L 1 redis-cli del
+Giải thích:
+
+--scan --pattern "auth:token*": Tìm các key bắt đầu bằng cụm đó một cách an toàn.
+
+xargs -L 1 redis-cli del: Lấy từng kết quả tìm được và gửi lệnh xóa tới Redis.
+
+***
+
+Xoá key theo pattern (môi trường test)
+
+2. Cách nhanh (Chỉ dùng cho môi trường Test/Dữ liệu ít)
+Nếu số lượng key của bạn ít (vài nghìn key), bạn có thể dùng lệnh gộp này:
+
+Bash
+redis-cli del $(redis-cli keys "auth:token*")
