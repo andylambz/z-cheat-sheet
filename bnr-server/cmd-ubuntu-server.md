@@ -8,6 +8,7 @@ curl ifconfig.me
 
 ## Telnet
 nc -vz <ip-address> 8892
+nc -zv 43.199.112.106 22000
 
 ***
 
