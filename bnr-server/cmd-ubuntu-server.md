@@ -25,3 +25,6 @@ sudo ss -tulnp | grep 8892
 
 # Check outbound gitlab from server
 ssh -T git@gl.owvn.org
+
+# top 10 usage memory
+ps aux --sort=-%mem | head -n 10
